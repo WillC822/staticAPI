@@ -9,6 +9,9 @@ module.exports = function(express) {
         res.json({ healthy: true });
     });
 
+    router.get('/user/id', function(req, res){
+        res.json({ user { id: req.param.id}});
+    });
 
     return router;
 }
