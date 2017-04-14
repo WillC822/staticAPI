@@ -8,9 +8,13 @@
     "chai": "^3.5.0",
     "expect": "^1.20.2",
     "express": "^4.15.2",
+    "mysql": "^2.13.0",
+    "require": "^2.4.20",
+    "sequelize": "^3.30.4",
     "supertest": "^3.0.0"
   },
   "devDependencies": {
+    "dotenv": "^4.0.0",
     "mocha": "^3.2.0"
   },
   "scripts": {

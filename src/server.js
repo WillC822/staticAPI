@@ -1,20 +1,38 @@
-var express = require('express');
-var body_parser = require('body-parser');
-var app = express();
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
 
 //Config
-var port = 3000;
+const port = 3000;
 
-/*
-app.get('/', function(req, res){
-    res.json({hello: 'world'});
+
+/*app.get('/', function(req, res){
+    //route to get to main homepage
 });
-*/
 
-app.use('/api', require('../routes/api.js')(express));
+app.post('/api/shorten', function(req, res){
+    //route to create shortened URL
+});
+
+app.get('/:encoded_id', function(req,res){
+    //route to redirect visitor to original URL
+});
 
 var server = app.listen(port, function(){
     console.log('Server active on', port);
 });
+*/
 
-module.exports = server;
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended:true,
+}));
+
+app.use('/', require('/status')(express));
+
+exports.server = app.listen(port, () => {
+    console.log('Server Active On', port);
+})
+
+
+//module.exports = server;
