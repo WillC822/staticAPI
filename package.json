@@ -10,7 +10,7 @@
     "express": "^4.15.2",
     "mysql": "^2.13.0",
     "require": "^2.4.20",
-    "sequelize": "^3.30.4",
+    "sequelize": "^5.21.1",
     "supertest": "^3.0.0"
   },
   "devDependencies": {
